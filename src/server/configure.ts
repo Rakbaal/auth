@@ -3,9 +3,6 @@ import morgan from "morgan";
 import database from "./database";
 
 import auth from "../controllers/auth.controller";
-import users from "../controllers/users.controller";
-import threads from "../controllers/threads.controller";
-import posts from "../controllers/posts.controller";
 
 
 import User from "../models/user.model";
@@ -28,9 +25,6 @@ export default async function configure(app : Express.Application){
 
         // Mount all controllers routes
         app.use("/auth", auth);
-        app.use("/users", users);
-        app.use("/threads", threads);
-        app.use("/posts", posts);
 
         // Return true if success
         return true;
